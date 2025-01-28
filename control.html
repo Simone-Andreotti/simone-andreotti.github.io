@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>video test</title>
+
+    <!-- <script src="/videoJs/video.js" defer></script>
+    <script defer>
+      document.addEventListener('DOMContentLoaded', () => {
+          var player = videojs('my-video', {
+              preload: 'auto',
+              html5: {
+                hls: {
+                    starttime: 0, // Pre-buffer 5 seconds before playback
+                    maxBufferLength: 0, // Max buffer length (in seconds) before switching quality
+                    maxBufferSize: 0 * 1000 * 1000, // Max buffer size (in bytes)
+                    maxMaxBufferLength: 0, // Allow a larger buffer length for smooth playback
+                    enableLowInitialPlaylist: true,  // Force the video to start at the lowest quality
+                    startLevel: 0,  // Force start with the lowest quality level (index 0)
+                    smoothQualitySwitching: true,  // Allow dynamic switching between qualities
+                    capLevelToPlayerSize: true,  // Ensure the resolution fits the player size
+                    bandwithEstimate: 10000, // Simulate slow connection to prefer lower quality initially
+                    initialBitrate: 300000,  // Set initial bitrate lower to force lower resolution
+                }
+              }
+          });
+      });
+    </script> -->
+
+    <style>
+			.preloaderVideo{
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100vw;
+				height: 100vh;
+				z-index: 1000000;
+				margin: 0;
+				padding: 0;
+			}
+
+			.preloaderVideo{
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+
+      .preloaderVideo video{
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+		</style>
+  </head>
+  <body>
+
+    <h1>test</h1>
+    <p>test</p>
+
+    <!-- <video id="my-video" class="preloaderVideo" muted autoplay playsinline preload="auto">
+      <source src="/video/hls_output/master.m3u8" type="application/x-mpegURL">
+      Your browser does not support this video.
+    </video> -->
+
+    <video class="preloaderVideo" muted autoplay playsinline preload="auto">
+      <source src="./video/input.mp4" type="video/mp4">
+      Your browser does not support this video.
+    </video>
+  </body>
+</html>
